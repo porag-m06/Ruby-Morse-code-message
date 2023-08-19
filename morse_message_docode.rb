@@ -13,7 +13,7 @@ def morse_to_char(morse_char)
 end
 
 def morse_to_word(morse_word)
-  morse_chars = morse_word.split(' ')
+  morse_chars = morse_word.split
   english_word = ''
 
   morse_chars.each do |morse_char|
