@@ -14,7 +14,7 @@ def morse_to_char(morse_char)
   
   def morse_to_word(morse_word)
     morse_chars = morse_word.split(' ')
-    english_word = ""
+    english_word = ''
   
     morse_chars.each do |morse_char|
       english_char = morse_to_char(morse_char)
@@ -26,18 +26,18 @@ def morse_to_char(morse_char)
   
   def morse_to_sentence(morse_code)
     morse_words = morse_code.split('   ')
-    english_sentence = ""
+    english_sentence = ''
   
     morse_words.each do |morse_word|
       english_word = morse_to_word(morse_word)
-      english_sentence += english_word + " "
+      english_sentence += "#{english_word} "
     end
   
     english_sentence.strip
   end
   
-  # decoding message
-  input_morse = " .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ..."
+  # Decoding message
+  input_morse = ' .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
   english_sentence = morse_to_sentence(input_morse)
   puts english_sentence
   
